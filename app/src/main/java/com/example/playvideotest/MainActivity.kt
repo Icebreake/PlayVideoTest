@@ -3,6 +3,7 @@ package com.example.playvideotest
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             //如果当前没有正在播放视频，则调用start()方法开始播放
             if (!videoView.isPlaying) {
                 videoView.start()
+                Log.d("MainActivity", "video is playing")
             }
         }
 
